@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600&display=swap');
+*{
+    font-family: 'Baloo Tammudu 2', cursive;
+    box-sizing: border-box;
+}
+h1 {
+    color: #3f0259;
+}
+nav{
+    padding: 0 2rem;
+    background-color: #3f025998;
+}
+.nav-item{
+    padding: 0 10px;
+    font-size: .9rem;
+}
+.nav-item a{
+    color: #fff;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.nav-logo {
+    padding: .7rem;
+}
+.navbar-brand {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;   
+}
+.navbar-toggler {
+    border: 2px solid #fff !important;
+}
+.home, .about, .experience, .education, 
+.portfolio, .contact {
+    padding: 2rem 0;
+}
+
+.home-txt, .home-img {
+    margin: auto;
+    width: 80%;
+    padding: 40px;
+}
+.home-txt{
+    margin-top: 3%;
+}
+.home-txt h1, h2{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.home-txt h2 {
+    font-weight: 400;
+}
+.home-txt p{
+    padding: 1rem 0 .5rem;
+    font-size: 1.2em;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+.home-btn button{
+    padding: 8px 30px 0;
+    font-size: 18px;
+    border: 2px solid #3f0259;
+    border-radius: 20px;
+    background-color: #fff;
+    outline: none;
+    transition: .3s;
+}
+.home-btn button a{
+    text-decoration: none;
+    color: #3f0259;
+}
+
+.home-btn button:hover {
+    background-color: #3f0259;
+    transition: .3s;
+}
+.home-btn a:hover{
+    color: #fff;
+}
+
+.title{
+    padding: 2rem 0 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.sub-title{
+    padding: 2rem 0 1rem;
+    color: #3f02598f;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.ab-icon {
+    position: absolute;
+    margin: 0 11%;
+    
+}
+.ab-icon i{
+    padding: 26px;
+    font-size: 1.6rem;
+    border-radius: 50%;
+    background-color: #3f0259b0;
+    color: #fff;  
+}
+
+.boxes{
+    margin-top: 2rem;
+    padding: 3.3rem 0 2rem;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    text-align: center;    
+}
+.boxes ul li {
+   list-style: none;
+   line-height: 2.2;
+   letter-spacing: 2px;
+   
+}
+.port-caro {
+    padding-top: 2rem;
+}
+.carousel-item {
+    height: 400px;
+}
+  
+.item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 300px;
+}
+.blog-post {
+    margin: 0 2.3rem;
+    line-height: 1.8;
+}
+.blog-post h2{
+    padding-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.blog-title {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    color: #464444a8;
+}
+
+
+.info-text{
+    margin: 0 2rem;
+    padding: 0 2rem;
+    text-align: center;
+}
+.contact .icons{
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    font-size: 34px;
+}
+.contact .icons i{
+    padding: 0 30px;
+    color: #464444;
+    transition: .3s;
+}
+.contact .icons i:hover{
+    color: #58037c;
+}
+.email{
+    font-size: 1.4rem;
+    text-align: center;
+}
+footer{
+    padding: 1rem 0;
+    background-color: #3f0259;
+    color: #fff;
+}
+footer p{
+    text-align: center;
+}
