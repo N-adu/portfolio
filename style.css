@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -41,17 +42,18 @@ header.sticky {
 nav {
   padding: 0 2rem;
   background-color: #f4f4f469;
-  -webkit-box-shadow: 0px 10px 13px -7px #4003726e,
-    5px 5px 15px 5px rgba(102, 7, 114, 0);
-  box-shadow: 0px 10px 13px -7px #4003726e, 5px 5px 15px 5px rgba(64, 6, 82, 0);
+  -webkit-box-shadow: 0px 10px 10px -7px #4003726e,
+    5px 5px 12px 5px rgba(102, 7, 114, 0);
+  box-shadow: 0px 10px 10px -7px #4003726e, 5px 5px 12px 5px rgba(64, 6, 82, 0);
 }
 .nav-item {
   padding: 6px 10px 0;
   font-size: 1.1rem;
 }
 .nav-item a {
-  font-weight: 600;
+  font-weight: 400;
   color: #58037c;
+  text-transform: uppercase;
   letter-spacing: 1px;
   transition: 0.3s;
 }
@@ -64,7 +66,6 @@ nav {
   padding: 0.7rem;
 }
 .navbar-brand {
-  text-transform: uppercase;
   letter-spacing: 2px;
   color: #3f0259;
 }
@@ -72,8 +73,17 @@ nav {
   border: 2px solid #58037c !important;
   outline: none;
 }
-.navbar-toggler:focus-visible {
+.navbar-toggler-icon {
+  padding-top: 5px;
+  color: #58037c;
+}
+.navbar-toggler:focus {
   outline: none;
+  box-shadow: none !important;
+}
+.navbar-collapse.collapse.show{
+  text-align: center;
+  transition: .4s ease;
 }
 
 
@@ -95,11 +105,12 @@ h1 {
 .home-txt,
 .home-img {
   margin: auto;
-  width: 80%;
+  width: 70%;
 }
 .home-txt {
   margin-top: 5%;
   padding-top: 20px;
+  width: 85%;
 }
 .home-txt h1,
 h2 {
@@ -110,7 +121,7 @@ h2 {
 }
 .home-txt h2 {
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 .home-txt p {
   padding: 0.2rem 0;
@@ -124,9 +135,9 @@ h2 {
 .home-btn button {
   padding: 12px 30px 2px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 400;
   border: 2px solid #58037c;
-  border-radius: 6px;
+  border-radius: 4px;
   background-color: #fff;
   outline: none;
   transition: 0.3s;
@@ -145,9 +156,15 @@ h2 {
 
 .title {
   padding-bottom: 1.5rem;
+  font-weight: 500;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+.title h1 span{
+  font-size: 4rem;
+  font-weight: 400;
+  color: #464444;
 }
 
 .sub-title {
@@ -179,7 +196,7 @@ h2 {
   margin: 1rem;
   padding: 1rem 0;
   background-color: #f4f4f4;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
   box-shadow: 3px 6px 16px 1px rgba(0, 0, 0, 0.15);
 }
@@ -198,7 +215,7 @@ h2 {
   padding: 1.4rem 0 1rem;
   font-weight: 500;
   background-color: #f4f4f4;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
   box-shadow: 3px 6px 11px 2px rgba(0, 0, 0, 0.15);
   transition: 0.4s ease-in;
@@ -212,17 +229,16 @@ h2 {
   margin-bottom: 0;
   color: #3f0259;
 }
-.ex-arrow {
+/* .ex-arrow {
   margin-right: 1.5rem;
   justify-content: flex-end;
   display: flex;
   color: #f4f4f4;
   font-size: 1.3rem;
-}
+} */
 .ex-boxes:hover {
   background-color: #58037cbd;
   cursor: pointer;
-  transform: scale(1.1);
   color: #f4f4f4;
 }
 .ex-boxes span:hover,
@@ -298,18 +314,38 @@ h2 {
 }
 
 /* CONTACT ME SECTION STYLING */
+form {
+  padding-top: 1.5rem;
+  max-width: 90%;
+}
+.form-control {
+ margin-bottom: 20px;
+}
+form .form-control {
+  border: 1px solid #8552e4;
+}
+.form-control:focus{
+  border: 1px solid #8552e4;
+  border-color: #8552e4 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #58037c52 !important;
+}
+form .submit-btn{
+  padding: 10px 35px 4px;
+  border: 2px solid #8552e4;
+}
 .contact .icons {
   padding: 3.5rem 0;
   display: flex;
   justify-content: center;
-  font-size: 28px;
+  font-size: 22px;
 }
 .contact .icons i {
   margin: 0 20px;
-  padding: 20px;
+  padding: 12px;
   color: #464444;
   transition: 0.3s;
-  border-radius: 136px;
+  border-radius: 5px;
   background: linear-gradient(145deg, #ffffff, #dcdcdc);
   box-shadow: 7px 7px 14px #58037c52, -7px -7px 14px #ffffff;
 }
@@ -363,11 +399,6 @@ footer p {
   .blog-post {
     margin: 0;
   }
-  .contact .icons {
-    font-size: 22px;
-  }
-  .contact .icons i{
-    padding: 20px;
-  }
+  
   
 }
