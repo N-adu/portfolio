@@ -89,7 +89,7 @@ nav {
 
 /* SECTION STYLING */
 section {
-  height: 90%;
+  height: 100%;
   padding: 4rem 0;
 }
 section:nth-child(odd) {
@@ -103,15 +103,15 @@ h1 {
 }
 
 /* HOME STYLING */
+
 .home-txt,
 .home-img {
-  margin: auto;
-  width: 70%;
+  margin: 0 auto;  
 }
 .home-txt {
   margin-top: 5%;
   padding-top: 20px;
-  width: 85%;
+  width: 82%;
 }
 .home-txt h1,
 h2 {
@@ -125,10 +125,11 @@ h2 {
   font-weight: 300;
 }
 .home-txt p {
+  margin-right: 1.5rem;
   padding: 0.2rem 0;
-  font-size: 1.1em;
+  font-size: 1.1rem;
   line-height: 1.8;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 .home-btn {
   padding: 10px 0;
@@ -153,6 +154,10 @@ h2 {
 }
 .home-btn a:hover {
   color: #f4f4f4;
+}
+.home-img {
+  margin-top: 2%;
+  width: 75%;
 }
 
 .title {
@@ -398,6 +403,7 @@ footer p {
 @media (max-width: 768px) {
   .container, .container-sm {
     max-width: 80% !important;
+    margin: 0 auto !important;
 }
   .home-txt{
     padding: 10px 0;
