@@ -40,6 +40,7 @@ header.sticky {
 }
 /* NAVIGATION BAR */
 nav {
+  position: sticky;
   padding: 0 2rem;
   background-color: #f4f4f469;
   -webkit-box-shadow: 0px 10px 10px -7px #4003726e,
@@ -81,7 +82,7 @@ nav {
   outline: none;
   box-shadow: none !important;
 }
-.navbar-collapse.collapse.show{
+.collapse .navbar-collapse{
   text-align: center;
   transition: .4s ease;
 }
@@ -90,10 +91,16 @@ nav {
 /* SECTION STYLING */
 section {
   height: 100%;
-  padding: 4rem 0;
+  padding: 4rem 2rem;
+  /* transform: translateX(-100%);
+  transition: transform 0.4s ease; */
+}
+section.show {
+transform: translateX(0);
 }
 section:nth-child(odd) {
   background-color: #58037c09;
+ 
 }
 h1 {
   color: #3f0259;
@@ -101,6 +108,7 @@ h1 {
 .cotainer-fluid{
   width: 85%;
 }
+/* SECTION TRANSITIONS */
 
 /* HOME STYLING */
 
@@ -160,18 +168,13 @@ h2 {
   width: 75%;
 }
 
-.title {
-  padding-bottom: 1.5rem;
-  font-weight: 500;
+.title h1{
+  font-weight: 300;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.title h1 span{
-  font-size: 4rem;
-  font-weight: 400;
-  color: #464444;
-}
+
 
 .sub-title {
   padding: 3rem 0 .5rem;
@@ -182,50 +185,72 @@ h2 {
 }
 
 /* ABOUT SECTION STYLING */
-.info-text {
-  margin: 0;
+#about {
+  padding-bottom: 2rem;
+}
+.info-text.ab {
+  margin: 2.8rem .5rem 1rem 0rem;
   padding: 0;
-  letter-spacing: 1px;
+  text-align: left;
+  line-height: 1.9;
 }
-.ab-icon {
-  padding-bottom: 1rem;
-}
+/* .ab-icon {
+  padding-bottom: 1.5rem;
+} */
 .ab-icon i {
-  padding: 24px;
-  font-size: 1.7rem;
+  margin: .5rem 0;
+  padding: 10%;
+  font-size: 1.5rem;
   border-radius: 50%;
   border: 3px dotted #3f02598f;
   color: #3f02598f;
 
 }
+.ab-icon h5 {
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: #3f02598f;
+}
+.col.box {
+  margin: 0 auto;
+  display: flex;
+  width: 80%;
+}
 .boxes {
-  margin: 1rem;
-  padding: 1rem 0;
+  padding: .5rem;
+  margin-left: 14px;
+  margin-bottom: 6%;
+  width: 30%;
   background-color: #f4f4f4;
   border-radius: 5px;
   text-align: center;
   box-shadow: 3px 6px 16px 1px rgba(0, 0, 0, 0.15);
 }
 .boxes ul {
+  margin-top: 5%;
   padding-left: 0;
 }
 .boxes ul li {
   list-style: none;
-  line-height: 1.8;
-  letter-spacing: 2px;
+  line-height: 1.7;
+  letter-spacing: 1px;
 }
 
-/* EXPERIENCE SECTION STYLING */
+/* Training sect */
 .ex-boxes {
-  margin-top: 1rem;
-  padding: 1.4rem 0 1rem;
+  padding: .6rem;
+  margin: 2%;
+  width: 30%;
   font-weight: 500;
   background-color: #f4f4f4;
   border-radius: 5px;
   text-align: center;
-  box-shadow: 3px 6px 11px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 3px 6px 16px 1px rgba(0, 0, 0, 0.15);
   transition: 0.4s ease-in;
 }
+/* .ex-boxes:first-child, .ex-boxes:nth-child(3){
+  margin-left: 0;
+} */
 .ex-boxes .ex-p span {
   font-size: 0.8rem;
   font-weight: 600;
@@ -235,25 +260,48 @@ h2 {
   margin-bottom: 0;
   color: #3f0259;
 }
-/* .ex-arrow {
-  margin-right: 1.5rem;
-  justify-content: flex-end;
-  display: flex;
-  color: #f4f4f4;
-  font-size: 1.3rem;
+/* .ex-p{
+  margin-top: 6%;
 } */
 .ex-boxes:hover {
   font-weight: 500;
   background-color: #9b979734;
   color: #f4f4f4;
 }
-
-/* EDUCATION */
+.col.int {
+  margin: 4% 0 0 3%;
+}
+.col.ex {
+  margin: 0 auto;
+  display: flex;
+  width: 90%;
+}
+.info-text.int {
+  text-align: left;
+}
+.ab-title h2{
+  font-weight: 400;
+  margin-top: .8rem;
+  padding: .8rem 0 0;
+  color: #3f02598f;
+  text-transform: capitalize;
+  text-align: center;
+}
+.vid {
+  display: flex;
+  justify-content: center;
+}
+.vid video{
+  box-shadow: 3px 6px 9px 2px rgba(0, 0, 0, 0.25);
+}
 .title .tr h1{
   text-align: center;
 }
 /* PORTFOLIO BOXES */
-
+.info-text p {
+  margin-bottom: 4%;
+  text-align: center;
+}
 .content {
   margin: 0 auto;
   width: 90%;
@@ -299,7 +347,7 @@ h2 {
 
 /* BLOG SECTION STYLING */
 .blog-post {
-  margin: 0 2.3rem;
+  margin: 0 2rem;
   line-height: 1.8;
 }
 .blog-post h2 {
@@ -308,62 +356,28 @@ h2 {
   letter-spacing: 4px;
 }
 .blog-title {
+  font-weight: 300;
   padding: 1rem 0;
   display: flex;
   justify-content: space-between;
   color: #464444a8;
 }
 .info-text {
-  margin: 0 2rem;
-  padding: 0 2rem;
+  /* margin: 0 2rem;
+  padding: 0 2rem; */
   text-align: center;
+}
+.blog-img {
+  margin: 0 auto;
+  border: 2px dotted #3f02598f;
+  width: 80%;
+}
+.blog-img img {
+  margin-left: 2rem;
+  width: 90%;
 }
 
 /* CONTACT ME SECTION STYLING */
-form {
-  margin: 0 auto;
-  padding-top: 1.5rem;
-  max-width: 90%;
-}
-.form-control {
- margin-bottom: 20px;
-}
-form .form-control {
-  border: 1px solid #58037c;
-}
-.form-control:focus{
-  border: 1px solid #8552e4;
-  border-color: #8552e4 !important;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem #58037c52 !important;
-  transition: all .3s ease;
-}
-.form-control.error {
-  border: 1px solid red;
-}
-form .submit-btn{
-  padding: 10px 35px 2px;
-  font-size: 18px;
-  border: 2px solid #58037c; 
-}
-form .submit-btn a {
-  text-decoration: none;
-  color: #58037c;
-}
-.form-group textarea {
-  margin-bottom: 2px;
-}
-.form-group small {
-  visibility: hidden;
-  color: red;
-  transition: .4s ease;
-}
-.form-group small.error {
-  visibility: visible;
-}
-form .submit-btn:focus{
-  box-shadow: 0 0 0 0.25rem #58037c52 !important;
-}
 
 .contact .icons {
   padding: 3.5rem 0;
@@ -383,9 +397,14 @@ form .submit-btn:focus{
 .contact .icons i:hover {
   color: #58037c;
 }
+
 .email {
-  font-size: 1.2rem;
-  text-align: center;
+    font-size: 1.2rem;
+    text-align: center;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* FOOTER STYLING */
@@ -404,7 +423,10 @@ footer p {
   .container, .container-sm {
     max-width: 80% !important;
     margin: 0 auto !important;
-}
+  }
+  section {
+    font-size: .9rem;
+  }
   .home-txt{
     padding: 10px 0;
     text-align: center;
@@ -422,10 +444,58 @@ footer p {
     margin: 0;
     padding: 0;
   }
+  /* About */
+  .info-text.ab {
+    margin-right: 0;
+  }
+  .col.box {
+    /* margin: 0 auto; */
+    height: 100%;
+  }
+  .col.int {
+    margin-top: 4%;
+    padding: 0;
+  }
+  .info-text.int p {
+    margin: 12% 0 2% 0;
+  }
+  .boxes {
+    padding: .4rem;
+  }
   
+  .ex-boxes .ex-p {
+    font-size: .8rem;
+}
+  .ex-boxes {
+    grid-template-columns: 90px;
+    height: auto;
+  }
+  .ex-p {
+    margin-top: 8%;
+  }
+  .vid video {
+    width: 100%;
+  }
+  /* Portfolio */
+  .content {
+    margin: 0 auto;
+  }
   .blog-post {
     margin: 0;
   }
+
+  /* .email {
+    height: auto;
+  } */
   
-  
+}
+/* Max-width 600px */
+@media (max-width: 600px) {
+  section{
+    overflow: hidden;
+  }
+  .email {
+    padding: 1.5rem 0 0;
+    height: 0;
+  }
 }
