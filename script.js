@@ -16,4 +16,5 @@ const homeText = document.querySelector('.home-txt');
 window.onload = function animationLoad () {
     homeText.classList.add('show');
 }
+animationLoad();
 
