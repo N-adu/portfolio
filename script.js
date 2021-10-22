@@ -9,26 +9,11 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Contact form validation
 
-const submitBtn = document.querySelector('.submit-btn');
+//Window animation
+const homeText = document.querySelector('.home-txt');
 
-const checkInputs = () => {
-    const formInputs = document.getElementsByTagName('input');
-    const textArea = document.getElementById('textArea');
-    const smallTxt = document.querySelector('small');
-
-    for(let i = 0; i < formInputs.length; i++){
-        formInputs[i].value === '' ? formInputs[i].classList.add('error') : true;      
-    }
-
-    textArea.value === '' ? textArea.classList.add('error') : true;
-    textArea.value === '' ? smallTxt.classList.add('error') : true;
-    
+window.onload = function animationLoad () {
+    homeText.classList.add('show');
 }
 
-submitBtn.addEventListener('click', (e) =>{
-    e.preventDefault();
-    checkInputs();
-
-})
